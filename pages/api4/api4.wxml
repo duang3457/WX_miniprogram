@@ -1,0 +1,13 @@
+<view class="out">
+  <view class="form">
+    <input model:value="{{iptVal}}" type="text" placeholder="请输入用户名" bindconfirm="onSubmit"/>
+  </view>
+  <view class="row" wx:for="{{3}}" wx:key="id">
+    <view class="username">
+      用户名
+    </view>
+    <view class="time">
+      时间
+    </view>
+  </view>
+</view>

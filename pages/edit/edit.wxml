@@ -1,0 +1,42 @@
+<view class="title">编辑商品信息</view>
+
+  
+
+<view class="out">
+  <block wx:if="{{listArr.length}}">
+
+  <view class="list">
+    <view class="row" wx:for="{{listArr}}" wx:key="id">
+      <view class="text">{{index+1}}.{{item.title}}</view>
+      <view class="close" bindtap="clickClose" data-index="{{index}}">
+        <icon type="clear" size="26"/>
+      </view>
+    </view>
+  </view>
+  
+
+
+  <view class="count">
+  共{{listArr.length}}条评论
+  </view>
+  </block>
+
+  <view wx:else style="text-align: center;">
+暂无商品信息，请添加
+</view>
+
+  <view class="comment">
+    <input type="text"
+    placeholder="请输入主题..."
+    placeholder-style="color:#aaa;font-size:28rpx"
+    model:value="{{iptValue}}"
+    bindconfirm="onSubmit"
+    />
+    <button size="mini" type="primary" disabled="{{!iptValue.length}}"
+    bindtap="onSubmit">
+    添加
+    </button>
+  </view>
+</view>
+
+

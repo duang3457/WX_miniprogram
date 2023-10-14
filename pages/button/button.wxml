@@ -1,0 +1,25 @@
+<view class="outline">
+<input 
+style="margin-bottom: 20rpx; padding: 10rpx; background: #eee;" 
+type="text" 
+placeholder="请输入用户名" 
+confirm-type="done"
+bindinput="onInput"/>
+<view>{{inputContent}}</view>
+<textarea 
+class = "textarea"
+value=""/>
+
+
+<button
+ size="default"
+  type="primary"
+  plain="true"
+  disabled="{{!inputContent.length}}"
+  loading="{{false}}"
+  >
+按钮
+</button>
+</view>
+
+

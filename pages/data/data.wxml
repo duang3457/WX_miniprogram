@@ -1,0 +1,27 @@
+<view>这是一个onLoad里的定时变换(2000)：{{name}}</view>
+
+<view>----WXML条件渲染-----</view>
+
+
+<view wx:if="{{!isTest}}">bool</view>
+<view wx:elif="{{num==1}}">num=1</view>
+<view wx:if="{{num==2}}">num=2</view>
+
+<view>----WXML数组渲染-----</view>
+<view>----云数据库渲染有点慢----</view>
+<view wx:for="{{books}}" wx:for-item = "row" wx:for-index = "idx" wx:key = "idx">
+  四大名著：{{idx+1}}-{{row}}
+</view>
+
+<view>----WXML数组渲染2(图片)-----</view>
+<view wx:for="{{picDetail}}" wx:key="id">
+  <image src="{{item.picUrl}}" mode=""/>
+  <view>{{item.petName}}</view>
+</view>
+
+<view class="box" bind:tap="clickBox" 
+style="background-color: {{color}};width: {{size}}rpx;height: {{size}}rpx;">
+随机数:{{randNum}}
+</view>
+
+

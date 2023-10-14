@@ -1,0 +1,42 @@
+<scroll-view class="scroll_view" 	scroll-x>
+  <!-- <view class="row_background"></view> -->
+  <navigator url="/pages/logs/logs" style="display: inline-block;">
+    <image src="/static/images/piKaQiu.png" mode="heightFix" class="row" show-menu-by-longpress="true"/>
+  </navigator>
+  <!-- 用open-type="reLuanch可以携带参数，url后加？id=123，传递参数id=123" -->
+  <navigator url="/pages/data/data" style="display: inline-block;">
+    <image bind:tap="onClick" data-itsname="BaiBianGuai" data-age="1" src="/static/images/baiBianGuai.jpg" mode="heightFix" class="row" show-menu-by-longpress="true"/>
+  </navigator>
+
+  <navigator url="/pages/button/button" style="display: inline-block;">
+    <image src="/static/images/kaBiShou.jpg" mode="heightFix" class="row"/>
+  </navigator>
+
+  <navigator url="/pages/edit/edit" style="display: inline-block;">
+    <image src="/static/images/kaLakaLa.jpg" mode="heightFix" class="row"/>
+  </navigator>
+
+  <image src="/static/images/keDaYa.jpg" mode="heightFix" class="row"/>
+  <image src="/static/images/miaoWaZhongZi.jpg" mode="heightFix" class="row"/>
+  <image src="/static/images/pangDa.jpg" mode="heightFix" class="row"/>
+  <image src="/static/images/pangDing.jpg" mode="heightFix" class="row"/>
+
+</scroll-view>
+------
+<view>{{name}}{{age}}</view>
+
+<view bind:tap="goUsercenter">
+点击事件，Js方法跳转
+</view>
+
+<!-- <view>
+  <root-portal>
+    <view class="mask">
+    </view>  
+  </root-portal>
+</view> -->
+
+<!-- <image src="/static/images/piKaQiu.jpg" mode="heightFix" class="row"/>
+<image src="/static/images/baiBianGuai.jpg" mode="heightFix"/> -->
+
+<button bind:tap="clickBtn">管理员登录</button>

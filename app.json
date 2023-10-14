@@ -1,8 +1,33 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/data/data",
+    "pages/button/button",
+    "pages/edit/edit",
+    "pages/usercenter/usercenter",
+    "pages/api2/api2",
+    "pages/payMenthod/payMenthod",
+    "pages/api3/api3",
+    "pages/api4/api4"
   ],
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#FF5F15",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/edit/edit",
+        "text": "我的"
+      }
+    ]
+  },
+
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",

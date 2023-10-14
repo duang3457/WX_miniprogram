@@ -1,0 +1,30 @@
+.scroll_view {
+  width: 100%;
+  white-space: nowrap;
+}
+
+.scroll_view .row{
+  position: relative;
+  width: 200rpx;
+  height: 200rpx;
+  /* background-color: green; */
+  /* margin-right: 10rpx; */
+  display: inline-block;
+  z-index: 200;
+  /* top: -160rpx; */
+  border: 2px solid green;
+
+}
+
+.scroll_view .row_background{
+  position: relative;
+  width: 1650rpx;
+  height: 160rpx;
+  background-color: gray;
+  z-index: 100;
+  top: 40rpx;
+}
+
+.scroll_view .row:last-child{
+  margin-right: 0;
+}

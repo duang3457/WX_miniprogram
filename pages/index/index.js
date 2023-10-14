@@ -9,8 +9,53 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     canIUseGetUserProfile: false,
-    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName') // 如需尝试获取用户信息可改为false
+    canIUseOpenData: wx.canIUse('open-data.type.userAvatarUrl') && wx.canIUse('open-data.type.userNickName'), // 如需尝试获取用户信息可改为false
+    name: "123",
+    age: "123"
   },
+  goUsercenter(){
+    // 无返回
+    // wx.reLaunch({
+    //   url: '/pages/usercenter/usercenter',
+    // })
+    // 有返回
+    wx.navigateTo({
+      url: '/pages/usercenter/usercenter',
+    })
+  },
+
+
+  clickBtn(){
+    wx.showModal({
+      title: '密码',
+      // content: '',
+      editable:true,
+      placeholderText:"输入张阳大王万岁试试...",
+      success: (res) => {
+        if (res.content=="张阳大王万岁") {
+          wx.navigateTo({
+            url: "/pages/edit/edit"
+          })
+        }else{
+          wx.showToast({
+            title: '再回去练练吧',
+            mask: true
+          })
+        }
+      }
+    })
+  },
+
+  onClick(event){
+    console.log(event.currentTarget.dataset);
+    let {age, itsname} = event.currentTarget.dataset;
+    console.log(itsname);
+    this.setData({
+      name: itsname,
+      age: age
+    })
+  },
+
   // 事件处理函数
   bindViewTap() {
     wx.navigateTo({
